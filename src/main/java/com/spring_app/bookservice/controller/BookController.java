@@ -30,4 +30,9 @@ public class BookController {
     @DeleteMapping("/{id}") public void delete(@PathVariable Long id) {
         bookService.delete(id);
     }
+
+    @GetMapping("/msg")
+    public String getMessage() {
+        return "Hi";
+    }
 }
