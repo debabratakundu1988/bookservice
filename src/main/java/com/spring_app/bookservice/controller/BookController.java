@@ -17,9 +17,17 @@ public class BookController {
     BookService bookService;
 
     @GetMapping
-    public List<Book> getAllBooks() { return bookService.getAll(); }
+    public List<Book> getAllBooks() {
+        return bookService.getAll();
+    }
     @PostMapping
-    public Book addBook(@RequestBody Book book) { return bookService.save(book); }
-    @GetMapping("/{id}") public Book getBook(@PathVariable Long id) { return bookService.getById(id); }
-    @DeleteMapping("/{id}") public void delete(@PathVariable Long id) { bookService.delete(id); }
+    public Book addBook(@RequestBody Book book) {
+        return bookService.save(book);
+    }
+    @GetMapping("/{id}") public Book getBook(@PathVariable Long id) {
+        return bookService.getById(id);
+    }
+    @DeleteMapping("/{id}") public void delete(@PathVariable Long id) {
+        bookService.delete(id);
+    }
 }
